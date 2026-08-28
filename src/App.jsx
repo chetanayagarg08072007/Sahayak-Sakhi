@@ -18,7 +18,7 @@ function App() {
         <div className="app-container" style={{ position: "relative" }}>
           <header className="header">
             <Link to="/" style={{ textDecoration: "none" }}>
-              <h1>Family Support Navigator</h1>
+              <h1>Sahayak Sakhi</h1>
             </Link>
           </header>
 
