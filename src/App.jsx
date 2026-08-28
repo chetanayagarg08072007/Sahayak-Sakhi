@@ -17,9 +17,29 @@ function App() {
       <HashRouter>
         <div className="app-container" style={{ position: "relative" }}>
           <header className="header">
-            <Link to="/" style={{ textDecoration: "none" }}>
-              <h1>Sahayak Sakhi</h1>
-            </Link>
+            <header className="header">
+              <Link
+                to="/"
+                style={{
+                  textDecoration: "none",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "12px",
+                }}
+              >
+                <img
+                  src="/Sahayak-Sakhi/sahayak_sakhi.png"
+                  alt="Sahayak Sakhi"
+                  style={{
+                    width: "55px",
+                    height: "55px",
+                    objectFit: "contain",
+                    borderRadius: "50%",
+                  }}
+                />
+                <h1>Sahayak Sakhi</h1>
+              </Link>
+            </header>
           </header>
 
           <main className="main-content">
