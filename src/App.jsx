@@ -1,27 +1,27 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import { UserProvider } from './context/UserContext';
-import Home from './pages/Home';
-import ModeSelect from './pages/ModeSelect';
-import VoiceAssessment from './pages/VoiceAssessment';
-import Assessment from './pages/Assessment';
-import VerifyAssessment from './pages/VerifyAssessment';
-import Dashboard from './pages/Dashboard';
-import SchemeDetails from './pages/SchemeDetails';
-import Tracker from './pages/Tracker';
-import AIHelper from './components/AIHelper';
+import React from "react";
+import { HashRouter, Routes, Route, Link } from "react-router-dom";
+import { UserProvider } from "./context/UserContext";
+import Home from "./pages/Home";
+import ModeSelect from "./pages/ModeSelect";
+import VoiceAssessment from "./pages/VoiceAssessment";
+import Assessment from "./pages/Assessment";
+import VerifyAssessment from "./pages/VerifyAssessment";
+import Dashboard from "./pages/Dashboard";
+import SchemeDetails from "./pages/SchemeDetails";
+import Tracker from "./pages/Tracker";
+import AIHelper from "./components/AIHelper";
 
 function App() {
   return (
     <UserProvider>
-      <BrowserRouter>
-        <div className="app-container" style={{ position: 'relative' }}>
+      <HashRouter>
+        <div className="app-container" style={{ position: "relative" }}>
           <header className="header">
-            <Link to="/" style={{ textDecoration: 'none' }}>
+            <Link to="/" style={{ textDecoration: "none" }}>
               <h1>Family Support Navigator</h1>
             </Link>
           </header>
-          
+
           <main className="main-content">
             <Routes>
               <Route path="/" element={<Home />} />
@@ -38,7 +38,7 @@ function App() {
           {/* AI Voice and Chat Assistant is always available across the entire site */}
           <AIHelper />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </UserProvider>
   );
 }
